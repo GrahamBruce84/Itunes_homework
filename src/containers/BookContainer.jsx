@@ -22,7 +22,7 @@ class BookContainer extends React.Component {
         const data = JSON.parse(jsonString);
         this.setState({
           books: data.feed.entry,
-          focusBook: null
+          focusBook: data.feed.entry[0]
         });
       }
     });
