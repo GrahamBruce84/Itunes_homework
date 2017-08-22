@@ -38,7 +38,7 @@ class BookContainer extends React.Component {
  render(){
   return (
     <div id="container">
-    <h2 id="header-song">Top 20 Shite songs of the week</h2>
+    <h2 id="header-song">Top 20 <span id="offset">Shite</span> songs of the week</h2>
     <BookSelector 
     books={this.state.books} 
     selectBook={this.setFocusBook.bind(this)}/>
