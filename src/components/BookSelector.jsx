@@ -16,7 +16,7 @@ class BookSelector extends React.Component {
     });
 
     const selectedBook = this.props.books[newIndex];
-    this.props.selectBook(selectedBook);
+    this.props.selectBook(selectedBook, newIndex);
   }
 
     render() {

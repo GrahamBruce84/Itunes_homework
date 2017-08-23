@@ -10,6 +10,7 @@ class BookDetail extends React.Component {
     return (
       <div className="allSongs">
       <h3>{this.props.book["im:artist"].label}</h3>
+      <h3>{this.props.chartPosition}</h3>
       <h4>{this.props.book["im:name"].label}</h4>
       <img src={this.props.book["im:image"][2].label} alt={this.props.book["im:artist"].label}/>
       </div>

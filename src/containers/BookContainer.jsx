@@ -8,7 +8,8 @@ class BookContainer extends React.Component {
     super(props);
     this.state = {
       books: [],
-      focusBook: null
+      focusBook: null,
+      chartPosition: 1
     };
   }
 
@@ -29,9 +30,10 @@ class BookContainer extends React.Component {
     request.send();
   }
 
-  setFocusBook(book){
+  setFocusBook(book, index){
    this.setState({
-    focusBook: book
+    focusBook: book,
+    chartPosition: parseInt(index)+1
   }) 
  }
 
@@ -42,7 +44,7 @@ class BookContainer extends React.Component {
     <BookSelector 
     books={this.state.books} 
     selectBook={this.setFocusBook.bind(this)}/>
-    <BookDetails book={this.state.focusBook}/>
+    <BookDetails book={this.state.focusBook} chartPosition={this.state.chartPosition}/>
     </div>
     );
 }
